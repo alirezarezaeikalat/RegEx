@@ -38,10 +38,24 @@
     \s match any whitespace characters (spaces, tabs etc)
     \t match tab character only
 
-12. The special characters:
+12. The special characters after one character:
 
     + The one or more quantifier
-    \ the escape character
+    ? zero or one quantifier
+    * zero or more quantifier
+    \ the escape character (\* means * in the string)
     [] The character set
     [^] The negate symbol in a character set
+    . Any character (except the new line character )
 
+13. alternate character:  |
+to match pyre and tyre   (p|t)yre
+
+14. Starting(^) and Ending($) pattern:
+    /^[a-z]{5}$/i  it means the five letter word must be at the 
+    first and end of the word
+
+15. we can make regular expressions in two ways:
+
+    a. var reg = /a-z/g;
+    b. var reg2 = new RegEx(/[a-z]/, "g");
